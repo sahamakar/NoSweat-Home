@@ -570,6 +570,14 @@ form, .send{
     color: white;
     cursor: pointer;
 }
+.links a:hover {
+    color: black;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
 .links > div {
     padding-bottom: 13px;
     font-size: 13px;
@@ -591,7 +599,7 @@ form, .send{
 .contact_info {
     padding-bottom: 32px;
 }
-.location, .phone, email {
+.location, .phone, .email {
     display: inline-block;
     vertical-align: top;
 }
@@ -1255,9 +1263,15 @@ form, .send{
     .instagramIcon {
         font-size: 18px;
         padding-right: 8px;
+        display: block;
     }
     .noSweat_hash {
         font-size: 14px;
+        display: block;
+    }
+    .photo_example {
+        padding-bottom: 8px;
+        padding-top: 8px;
     }
     .hatsItem_photo p {
         font-size: 32px;
@@ -1290,7 +1304,7 @@ form, .send{
     }
     .links > div {
         padding-bottom: 7px;
-        font-size: 9px;
+        font-size: 10px;
     }
     .contacts {
         padding-top: 5px;
@@ -1348,14 +1362,18 @@ form, .send{
         font-size: 19px;
     }
     input {
-        width: 180px;
+        width: 165px;
     }
     .links {
         float: none;
         padding: 25px 0 15px 0;
     }
+    .location {
+        width: 55%;
+    }
     .email {
         padding-top: 15px;
+        display: block;
     }
 
 
