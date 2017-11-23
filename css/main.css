@@ -56,10 +56,11 @@ body {
     right: 0;
 }
 .logoImgs {
+    max-width: 58%;
     float: left;
     padding: 14px 20px 20px 8px;
 }
-.logoImgs > div {
+.logo, .logo_americanMade {
     display: inline-block;
     padding: 0 20px;
 }
@@ -77,6 +78,7 @@ body {
     font-size: 35px;
     padding: 20px 100px;
     margin-right: 60px;
+    cursor: pointer;
 }
 .navigation li {
     display: inline-block;
@@ -228,6 +230,10 @@ a:hover {
     vertical-align: middle;
     padding: 55px 90px;
 }
+.advantages_container  div {
+    display: inline-block;
+    vertical-align: middle;
+}
 .advantages img {
     vertical-align: middle;
 }
@@ -316,6 +322,7 @@ iframe {
 .usedBy {
     padding: 100px 50px;
 }
+
 .usedBy h1, .featuredIn h1 {
     display: table;
     font-size: 60px;
@@ -328,20 +335,20 @@ iframe {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 auto;
-    padding: 45px;
+    padding: 40px 0 90px 0;
 }
 .brands {
-    display: table;
+    max-width: 1180px;
     margin: 0 auto;
-}
-.brands img {
-    padding: 35px 15px;
-    vertical-align: middle;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
 }
 .switcher {
     display: table;
     margin: 0 auto;
-    padding: 90px 0 50px 0;
+    padding: 120px 0 50px 0;
 }
 .switcherCircle {
     background-color: #4a91c8;
@@ -357,12 +364,12 @@ iframe {
 
 /*  PHOTO EXAMPLE  */
 .photo_example {
-    padding: 100px;
+    padding: 100px 20px;
     background: url("../img/photo_bg.png") bottom center no-repeat;
     color: white;
     /*background-size: cover;*/
 }
-.instagramIcon_Link {
+.instagramIcon{
     display: table;
     margin: 0 auto;
     font-size: 60px;
@@ -375,15 +382,18 @@ iframe {
     font-weight: 800;
 }
 .photo_block > div {
-    display: inline-block;
-    padding: 8px;
+    padding: 0.5%;
 }
 .photo_block {
-    display: table;
+    max-width: 1020px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
     margin: 0 auto;
 }
 .photo_example > div:last-child{
-    padding-bottom: 50px;
+    padding-bottom: 55px;
 }
 
 /*  DASHBOARD  */
@@ -509,17 +519,15 @@ footer {
 .footerInfo {
     border-bottom: solid #3182c1 1px;
     padding-bottom: 5px;
-    /*text-align: center;*/
 }
-.footerInfo > div {
+.inboxBlock, .links, .inbox-linksBlock, .contacts {
     display: inline-block;
     vertical-align: top;
-
 }
 .footerWrapper {
     max-width: 1150px;
     padding: 100px 30px;
-    margin: auto;
+    margin: 0 auto;
 }
 .inboxBlock {
     padding-right: 32px;
@@ -585,6 +593,7 @@ form, .send{
 }
 .locationPhoneEmail > div {
     display: inline-block;
+    vertical-align: top;
 }
 .location, .phone {
     padding-right: 14px;
@@ -610,7 +619,6 @@ form, .send{
 
 
 /*  ---- RESPONSIVE ----  */
-/*RESPONSIVE */
 @media screen and (max-width: 2560px) {
     body {
         max-width: 1920px;
@@ -671,12 +679,25 @@ form, .send{
     .navigation li {
         padding: 0 10px;
     }
-    .featuresOptions > div {
-        padding-left: 35px;
+    .featuresOptions {
+        display: flex;
+        vertical-align: middle;
+        justify-content: space-between;
     }
-    /*.featuresOptions > div:first-child {
+    .featuresOptions > div {
         padding-left: 0;
-    }*/
+    }
+    .featuresOptions img {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .features {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .featuresOptions em {
+        padding-right: 0px;
+    }
 }
 @media screen and (max-width: 1348px) {
     .menu {
@@ -689,7 +710,7 @@ form, .send{
     }
     .navigation li {
         display: block;
-        padding: 15px 70px 5px 70px;
+        padding: 15px 50px 5px 50px;
         text-align: right;
         z-index: 99;
         background-color: #0d6cb6;
@@ -697,14 +718,636 @@ form, .send{
     #menu_switch:checked + ul{
         display: block;
     }
-    .featuresOptions {
-        max-width: 900px;
+    .sliderContent h1 {
+        font-size: 100px;
     }
-    .featuresOptions > div {
-        padding-left: 60px;
+    .sliderContent p {
+        font-size: 40px;
     }
-    .featuresOptions img {
+    .arrows {
+        font-size: 36px;
+    }
+    .features h1 {
+        font-size: 36px;
+    }
+    .advantages {
+        font-size: 24px;
+    }
+    .advantages_container > div {
+        padding: 30px 25px;
+    }
+    .advantages_imgContainer {
+        text-align: right;
+    }
+    .gameChanger h1 {
+        font-size: 36px;
+    }
+    .usedBy, .featuredIn {
+        padding: 70px 20px;
+    }
+    .switcher {
+        padding-top: 75px;
+    }
+    .usedBy h1, .featuredIn h1 {
+        font-size: 40px;
+        padding-bottom: 65px;
+    }
+    .inboxBlock {
+        padding-right: 25px;
+    }
+    .contacts {
+        padding-left: 25px;
+        width: 51%;
+    }
+    .links {
+        padding: 0 25px;
+    }
+}
+@media screen and (max-width: 1165px) {
+    .logoImgs {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 0;
+    }
+    .logo {
+        width: 55%;
+        border-right: solid #010101 2px;
+    }
+    .logo_americanMade {
+        width: 27%;
+        padding-right: 0;
+        padding-left: 10px;
+    }
+    .logoImgs img {
+        width: 100%;
+    }
+    .navigation {
+        padding-top: 3%;
+        padding-bottom: 0;
+    }
+    .shoppingCart {
+        padding-top: 2%;
+        padding-bottom: 0;
+    }
+    .usedBy, .featuredIn {
+        padding: 20px;
+    }
+    .brands {
+        max-width: 750px;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .brands div {
+        padding: 0 15px;
+        width: 15%;
+    }
+    .brands img {
+        width: 100%;
+    }
+    .switcher {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .photo_example {
+        padding: 10px 20px;
+        background-size: cover;
+    }
+    .photo_example > div:last-child {
+        padding-bottom: 0;
+    }
+    .photo_block {
+        max-width: 800px;
+    }
+    .photo_block > div {
+        width: 23%;
+    }
+    .photo_block img {
+        width: 100%;
+    }
+    .instagramIcon {
+        font-size: 36px;
+    }
+    .noSweat_hash {
+        font-size: 24px;
+    }
+    .hatsItem_photo p {
+        font-size: 32px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .hatsItem_buyNowButton {
+        padding: 12px 10px;
+        font-size: 20px;
+    }
+    .item_effects {
+        bottom: 45px;
+    }
+    .specifications_textAbove h1 {
+        font-size: 40px;
+    }
+    .specifications_playButton {
+        padding: 3% 0 2% 0;
+    }
+    .specifications_playButton img {
+        width: 12%;
+    }
+    .contacts {
+        width: 430px;
+    }
+    .location {
+        width: 145px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .navigation li {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .gameChanger {
+        flex-flow: column nowrap;
+    }
+    .gameChanger_Text {
+        width: 100%;
+        display: flex;
+    }
+    .gameChanger_Video {
+        width: 100%;
+    }
+    .GameChangerButton {
+        padding: 24px 50px;
+        font-size: 24px;
+    }
+    .gameChanger_Text_1 {
+        padding-right: 50px;
+    }
+    .startPrice {
+        font-size: 26px;
+        padding-left: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .americanMade {
+        padding: 30px 0 50px 0;
+    }
+    .instagramIcon {
+        display: inline-block;
+        padding-right: 20px;
+    }
+    .noSweat_hash {
+        display: inline-block;
+    }
+    .photo_example {
+        text-align: center;
+    }
+    .photo_example {
+        padding: 0 70px;
+    }
+    .contacts {
+        padding-top: 15px;
+        padding-left: 0;
+        width: 520px;
+    }
+    .location {
+        width: 225px;
+    }
+    .footerWrapper {
+        max-width: 520px;
+        padding: 50px 30px 20px 30px;
+    }
+    .copyright {
+        max-width: 65%;
+    }
+    .inbox-linksBlock {
+        display: block;
+    }
+    .links {
+        float: right;
+    }
+}
+@media screen and (max-width: 890px) {
+    .navigation {
+        font-size: 16px;
+        padding-top: 2%;
+    }
+    .menu {
+        font-size: 24px;
+    }
+    .shoppingCart {
+        padding-top: 1.0%;
+    }
+    .advantages_imgContainer {
+        width: 60px;
+        height: 60px;
+    }
+    .height100percent img{
+        height: 100%;
+    }
+    .width100percent img{
+        width: 100%;
+        padding-top: 18%;
+    }
+    .hatsItem_photo p {
+        font-size: 20px;
+    }
+    .hatsItem_buyNowButton {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+    .item_effects {
+        bottom: 35px;
+    }
+    .specifications_textAbove h1 {
+        font-size: 30px;
+    }
+    .specifications_textAbove p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 790px) {
+    .navigation {
+        padding-top: 3%;
+    }
+    .menu {
+        font-size: 20px;
+    }
+    .shoppingCart {
+        padding-top: 2%;
+        font-size: 28px;
+    }
+    .sliderContent h1 {
+        font-size: 65px;
+    }
+    .sliderContent p {
+        font-size: 24px;
+    }
+    .arrows {
+        font-size: 24px;
+    }
+    .features h1 {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+    .featuresOptions p {
+        font-size: 16px;
+    }
+    .features {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .advantages {
+        font-size: 16px;
+    }
+    .advantages_container > div {
+        padding: 20px 10px;
+    }
+
+    .gameChanger h1 {
+        font-size: 28px;
+    }
+    .gameChanger h2 {
+        font-size: 14px;
+        padding: 10px 0 20px 0;
+    }
+    .gameChanger p {
+        font-size: 12px;
+    }
+    .startPrice {
+        font-size: 18px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .GameChangerButton {
+        padding: 16px 50px;
+        font-size: 18px;
+    }
+    .americanMade {
+        padding: 25px 0 30px 0;
+    }
+    .americanMade img{
+        width: 75%;
+    }
+    .usedBy h1, .featuredIn h1 {
+        font-size: 28px;
+        padding: 20px 0;
+    }
+    .brands div {
+        padding: 0 12px;
+        width: 14%;
+    }
+    .switcher {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+    .switcherCircle {
+        height: 12px;
+        width: 12px;
+    }
+    .dashboard {
+        padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 625px) {
+    .logo-nav {
+        padding: 0 40px 0 30px;
+    }
+    .logo {
+        padding-left: 0;
+    }
+    .logoImgs {
+        max-width: 58%;
+        padding-left: 0;
+    }
+    .navigation {
+        padding-top: 2.5%;
+        font-size: 10px;
+    }
+    .navigation li {
+        padding: 8px 20px 5px 20px;
+    }
+    .navigation ul {
+        padding-top: 20px;
+    }
+    .menu {
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    .shoppingCart {
+        padding-top: 1.7%;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    .featuresOptions > div {
+        width: 17.3%;
+        text-align: center;
+    }
+    .featuresOptions p {
+        font-size: 10px;
+    }
+    .featuresOptions img {
+        display: inline-block;
+        width: 50%;
+    }
+    .advantages_container > div {
+        padding: 20px 10px;
+    }
+    .advantages_imgContainer {
+        width: 40px;
+        height: 40px;
+    }
+    .GameChangerButton {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
+    .gameChanger {
+        padding: 15px 30px;
+    }
+    .dashboard {
+        flex-flow: column wrap;
+    }
+    .hatsItem {
+        width: 95%;
+        margin: 15px;
+    }
+    .hatsItem_photo p {
+        bottom: calc(5% + 38px);
+        font-size: 58px;
+    }
+    .item_effects {
+        bottom: 57px;
+        width: 51%;
+    }
+    .hatsItem_buyNowButton {
+        padding: 10px;
+        font-size: 28px;
+    }
+    .specifications_textAbove h1 {
+        font-size: 20px;
+    }
+    .specifications_textAbove p {
+        font-size: 10px;
+    }
+    input {
+        width: 185px;
+    }
+    .inbox-linksBlock {
+        display: block;
+    }
+    .links {
+        float: right;
+    }
+    .contacts {
+        padding-top: 15px;
+        padding-left: 0;
+        width: 100%;
+    }
+    .location {
+        width: 33%;
+    }
+    .footerWrapper {
+        max-width: 520px;
+        padding: 50px 30px 20px 30px;
+    }
+    .copyright {
+        max-width: 65%;
+    }
+    .inbox-linksBlock {
+        display: block;
+    }
+    .links {
+        float: right;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        width: 52%;
+        border-right: solid #010101 1px;
+        padding-right: 10px;
+    }
+    .logo_americanMade {
+        width: 25%;
+        padding-left: 5px;
+    }
+    .menu {
+        font-size: 10px;
+        padding-top: 3%;
+    }
+    .shoppingCart {
+        font-size: 16px;
+    }
+    .navigation li {
+        padding: 8px 8px 5px 8px;
+    }
+    .sliderContent h1 {
+        font-size: 36px;
+    }
+    .sliderContent p {
+        font-size: 14px;
+    }
+    .arrows {
+        font-size: 14px;
+    }
+    .arrowLeft {
+        padding-right: 10px;
+    }
+    .arrowRight {
+        padding-left: 10px;
+    }
+    .features {
+        padding: 20px;
+    }
+    .features h1 {
+        font-size: 20px;
+        padding-bottom: 0;
+    }
+    .featuresOptions p {
+        font-size: 8px;
+    }
+    .advantages_imgContainer {
+        width: 30px;
+        height: 30px;
+    }
+    .advantages {
+        font-size: 11px;
+    }
+    .gameChanger_Text {
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .americanMade img {
+        width: 50%;
+    }
+    .gameChanger_Text_1 {
+        padding: 0;
+    }
+    .gameChanger h1 {
+        font-size: 20px;
+    }
+    .gameChanger h2 {
+        font-size: 12px;
+        padding: 5px 0 10px 0;
+    }
+    .gameChanger p {
+        font-size: 10px;
+    }
+    .startPrice {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .usedBy h1, .featuredIn h1 {
+        font-size: 20px;
+        padding-top: 0;
+    }
+    .brands div {
+        padding: 0 8px;
+        width: 14%;
+    }
+    .switcher {
+        padding-top: 8px;
+        padding-bottom: 0;
+    }
+    .switcherCircle {
+        height: 9px;
+        width: 9px;
+    }
+    .instagramIcon {
+        font-size: 18px;
+        padding-right: 8px;
+    }
+    .noSweat_hash {
+        font-size: 14px;
+    }
+    .hatsItem_photo p {
+        font-size: 32px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .hatsItem_buyNowButton {
+        padding: 12px 10px;
+        font-size: 20px;
+    }
+    .item_effects {
+        bottom: 45px;
+    }
+    .inboxBlock h1 {
+        font-size: 12px;
+    }
+    .inboxBlock p {
+        font-size: 9px;
+    }
+    .inputBlock {
+        display: table;
+        margin-top: 24px;
+    }
+    input {
+        width: 140px;
+    }
+    .send {
+        font-size: 12px;
+        padding: 7px 16px;
+    }
+    .links > div {
+        padding-bottom: 7px;
+        font-size: 9px;
+    }
+    .contacts {
+        padding-top: 5px;
+    }
+    .contacts h1 {
+        font-size: 9px;
+        padding-bottom: 8px;
+    }
+    .contacts p {
+        font-size: 9px;
+    }
+    .location, .phone {
+        padding-right: 14px;
+    }
+    .locationPhoneEmail h1 {
+        padding-bottom: 6px;
+    }
+    .contact_info {
+        padding-bottom: 18px;
+    }
+    .copyright {
+        font-size: 9px;
+    }
+    .socicons a {
+        padding-left: 12px;
+        font-size: 12px;
+    }
+    .copyright-socicons {
+        padding: 18px 0;
+    }
+    .footerWrapper {
+        padding-top: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 390px) {
+    .advantages {
+        font-size: 9px;
+    }
+    .advantages_container > div {
+         padding: 15px 6px;
+     }
+    .featuredIn h1 {
+        font-size: 19px;
+    }
+    input {
+        width: 180px;
+    }
+    .links {
+        float: none;
+        padding: 25px 0 15px 0;
+    }
+    .email {
+        padding-top: 15px;
+    }
+
+
 }
