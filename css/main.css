@@ -708,7 +708,25 @@ form, .send{
     }
 }
 @media screen and (max-width: 1348px) {
-    .menu {
+    .logoImgs {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 0;
+        max-width: 39%;
+    }
+    .logo {
+        width: 55%;
+        border-right: solid #010101 2px;
+    }
+    .logo_americanMade {
+        width: 27%;
+        padding-right: 0;
+        padding-left: 10px;
+    }
+    .logoImgs img {
+        width: 100%;
+    }
+    /*.menu {
         display: block;
     }
     .navigation ul {
@@ -725,7 +743,7 @@ form, .send{
     }
     #menu_switch:checked + ul{
         display: block;
-    }
+    }*/
     .sliderContent h1 {
         font-size: 100px;
     }
@@ -772,7 +790,7 @@ form, .send{
     }
 }
 @media screen and (max-width: 1165px) {
-    .logoImgs {
+    /*.logoImgs {
         padding-top: 2%;
         padding-bottom: 2%;
         padding-right: 0;
@@ -788,6 +806,24 @@ form, .send{
     }
     .logoImgs img {
         width: 100%;
+    }*/
+    .menu {
+    display: block;
+    }
+    .navigation ul {
+        display: none;
+        width: 100%;
+        padding-top: 50px;
+    }
+    .navigation li {
+        display: block;
+        padding: 15px 50px 5px 50px;
+        text-align: right;
+        z-index: 99;
+        background-color: #0d6cb6;
+    }
+    #menu_switch:checked + ul{
+        display: block;
     }
     .navigation {
         padding-top: 3%;
@@ -867,6 +903,9 @@ form, .send{
     }
 }
 @media screen and (max-width: 1030px) {
+    .logoImgs {
+        max-width: 65%;
+    }
     .navigation li {
         padding-left: 20px;
         padding-right: 20px;
@@ -913,17 +952,20 @@ form, .send{
     .contacts {
         padding-top: 15px;
         padding-left: 0;
-        width: 520px;
+        width: auto;
     }
     .location {
-        width: 225px;
+        width: 290px;
+    }
+    .location, .phone {
+        padding-right: 25px;
     }
     .footerWrapper {
-        max-width: 520px;
+        max-width: 780px;
         padding: 50px 30px 20px 30px;
     }
     .copyright {
-        max-width: 65%;
+        max-width: 79%;
     }
     .inbox-linksBlock {
         display: block;
@@ -1053,6 +1095,9 @@ form, .send{
     .dashboard {
         padding: 50px 20px;
     }
+    .location, .phone {
+        padding-right: 14px;
+    }
 }
 @media screen and (max-width: 625px) {
     .logo-nav {
@@ -1067,7 +1112,7 @@ form, .send{
     }
     .navigation {
         padding-top: 2.5%;
-        font-size: 10px;
+        font-size: 13px;
     }
     .navigation li {
         padding: 8px 20px 5px 20px;
@@ -1084,12 +1129,18 @@ form, .send{
         padding-left: 20px;
         font-size: 20px;
     }
+    .featuresOptions {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
     .featuresOptions > div {
-        width: 17.3%;
+        width: 140px;
         text-align: center;
     }
     .featuresOptions p {
-        font-size: 10px;
+        /*font-size: 10px;*/
     }
     .featuresOptions img {
         display: inline-block;
@@ -1108,6 +1159,9 @@ form, .send{
     }
     .gameChanger {
         padding: 15px 30px;
+    }
+    .photo_block > div {
+        width: 48%;
     }
     .dashboard {
         flex-flow: column wrap;
@@ -1166,34 +1220,42 @@ form, .send{
         padding-right: 0;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 501px) {
+    .logoImgs {
+        max-width: none;
+    }
+    .logo_americanMade {
+        display: block;
+        padding-left: 20px;
+    }
     .logo {
-        width: 52%;
+        width: 150px;
         border-right: solid #010101 1px;
         padding-right: 10px;
     }
+
     .logo_americanMade {
-        width: 25%;
+        width: 70px;
         padding-left: 5px;
     }
-    .menu {
+    /*.menu {
         font-size: 10px;
         padding-top: 3%;
-    }
-    .shoppingCart {
+    }*/
+    /*.shoppingCart {
         font-size: 16px;
-    }
+    }*/
     .navigation li {
         padding: 8px 8px 5px 8px;
     }
     .sliderContent h1 {
-        font-size: 36px;
+        font-size: 48px;
     }
     .sliderContent p {
-        font-size: 14px;
+        font-size: 20px;
     }
     .arrows {
-        font-size: 14px;
+        font-size: 20px;
     }
     .arrowLeft {
         padding-right: 10px;
@@ -1209,19 +1271,23 @@ form, .send{
         padding-bottom: 0;
     }
     .featuresOptions p {
-        font-size: 8px;
+        font-size: 14px;
+    }
+    .featuresOptions > div {
+        width: 115px;
     }
     .advantages_imgContainer {
         width: 30px;
         height: 30px;
     }
     .advantages {
-        font-size: 11px;
+        font-size: 12px;
+        text-align: center;
     }
     .gameChanger_Text {
         flex-flow: column nowrap;
         margin: 0 auto;
-        align-items: center;
+        align-items: flex-start;
     }
     .americanMade img {
         width: 50%;
@@ -1233,14 +1299,14 @@ form, .send{
         font-size: 20px;
     }
     .gameChanger h2 {
-        font-size: 12px;
+        font-size: 16px;
         padding: 5px 0 10px 0;
     }
     .gameChanger p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .startPrice {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 10px;
         margin-bottom: 20px;
     }
@@ -1270,6 +1336,9 @@ form, .send{
         display: block;
     }
     .photo_example {
+        padding: 0 30px;
+    }
+    .photo_example {
         padding-bottom: 8px;
         padding-top: 8px;
     }
@@ -1286,10 +1355,10 @@ form, .send{
         bottom: 45px;
     }
     .inboxBlock h1 {
-        font-size: 12px;
+        font-size: 16px;
     }
     .inboxBlock p {
-        font-size: 9px;
+        font-size: 11px;
     }
     .inputBlock {
         display: table;
@@ -1299,12 +1368,12 @@ form, .send{
         width: 140px;
     }
     .send {
-        font-size: 12px;
+        font-size: 14px;
         padding: 7px 16px;
     }
     .links > div {
-        padding-bottom: 7px;
-        font-size: 10px;
+        padding-bottom: 9px;
+        font-size: 11px;
     }
     .contacts {
         padding-top: 5px;
@@ -1314,7 +1383,7 @@ form, .send{
         padding-bottom: 8px;
     }
     .contacts p {
-        font-size: 9px;
+        font-size: 11px;
     }
     .location, .phone {
         padding-right: 14px;
@@ -1326,11 +1395,11 @@ form, .send{
         padding-bottom: 18px;
     }
     .copyright {
-        font-size: 9px;
+        font-size: 11px;
     }
     .socicons a {
         padding-left: 12px;
-        font-size: 12px;
+        font-size: 16px;
     }
     .copyright-socicons {
         padding: 18px 0;
@@ -1338,26 +1407,51 @@ form, .send{
     .footerWrapper {
         padding-top: 30px;
     }
+    .links {
+        padding-left: 0;
+    }
+    .inboxBlock {
+        padding-right: 0px;
+    }
 }
 
 
 
 @media screen and (max-width: 392px) {
+    .logo_americanMade {
+        display: block;
+        /*padding: 0 20px;*/
+    }
     .logo-nav {
         padding: 0 20px 0 20px;
     }
-    .navigation {
+    /*.navigation {
         font-size: 9px;
-    }
+    }*/
     .shoppingCart {
         padding-left: 10px;
     }
-    .advantages {
+    .sliderContent h1 {
+        font-size: 36px;
+    }
+    .sliderContent p {
+        font-size: 14px;
+    }
+    .arrows {
+        font-size: 14px;
+    }
+    .featuresOptions > div {
+        width: 92px;
+    }
+    /*.advantages {
         font-size: 9px;
     }
     .advantages_container > div {
          padding: 15px 6px;
-     }
+     }*/
+    .advantages {
+        text-align: center;
+    }
     .featuredIn h1 {
         font-size: 19px;
     }
